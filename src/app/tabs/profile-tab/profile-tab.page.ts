@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-profile-tab',
@@ -7,6 +8,9 @@ import { Component } from '@angular/core';
 })
 export class ProfileTabPage {
 
-  constructor() {}
+  constructor(private authService: AuthService) { }
 
+  logout() {
+    this.authService.logout();
+  }
 }
