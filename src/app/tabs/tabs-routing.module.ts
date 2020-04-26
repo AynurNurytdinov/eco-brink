@@ -8,47 +8,67 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'tab1',
+        path: 'lenta',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../tab1/tab1.module').then(m => m.Tab1PageModule)
+              import('./lenta-tab/lenta-tab.module').then(m => m.LentaTabPagePageModule)
           }
         ]
       },
       {
-        path: 'tab2',
+        path: 'apps',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+              import('./apps-tab/apps-tab.module').then(m => m.AppsTabPageModule)
           }
         ]
       },
       {
-        path: 'tab3',
+        path: 'points',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+              import('./points-tab/points-tab.module').then(m => m.PointsTabPageModule)
+          }
+        ]
+      },
+      {
+        path: 'tab4',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('./tab4/tab4.module').then(m => m.Tab4PageModule)
+          }
+        ]
+      },
+      {
+        path: 'profile',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('./profile-tab/profile-tab.module').then(m => m.ProfileTabPageModule)
           }
         ]
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/lenta',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/lenta',
     pathMatch: 'full'
-  }
+  },
 ];
 
 @NgModule({
