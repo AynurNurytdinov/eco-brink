@@ -5,5 +5,28 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  Есть идея с сообществами или мини приложениями типа некого спровачника, и еще чего то
+  <ion-card>
+    <ion-card-content [routerLink]="['info']">
+      <ion-icon name="information-circle-outline"></ion-icon>
+      Справочник
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content [routerLink]="['doing']">
+      <ion-icon name="star-outline"></ion-icon>
+      Поступки
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content [routerLink]="['tests']">
+      <ion-icon name="color-wand-outline"></ion-icon>
+      Испытания
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content [routerLink]="['events']">
+      <ion-icon name="rocket-outline"></ion-icon>
+      Мероприятия
+    </ion-card-content>
+  </ion-card>
 </ion-content>

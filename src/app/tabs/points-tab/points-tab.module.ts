@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { PointsTabPage } from './points-tab.page';
 import { ExploreContainerComponentModule } from '../../explore-container/explore-container.module';
+import { PointsListPage } from './points-list/points-list.page';
 
 @NgModule({
   imports: [
@@ -12,8 +13,14 @@ import { ExploreContainerComponentModule } from '../../explore-container/explore
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    RouterModule.forChild([{ path: '', component: PointsTabPage }])
+    RouterModule.forChild([
+      { path: '', component: PointsTabPage },
+      { path: 'list', component: PointsListPage }
+    ])
   ],
-  declarations: [PointsTabPage]
+  declarations: [
+    PointsTabPage,
+    PointsListPage
+  ]
 })
 export class PointsTabPageModule {}
