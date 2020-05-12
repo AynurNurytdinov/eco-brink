@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as L from 'leaflet';
+import { MarkerService } from 'src/app/services/marker/marker.service';
 
 @Component({
   selector: 'app-points-tab',
@@ -8,17 +9,19 @@ import * as L from 'leaflet';
 })
 export class PointsTabPage {
   map;
-  view = 'map';
-  constructor() {}
+  location = [55.7, 49.1];
+
+  constructor(private markerService: MarkerService) {}
 
   ionViewDidEnter() {
     this.initMap();
+    this.markerService.makePointsMarkers(this.map);
   }
 
   initMap() {
     this.map = L.map('map', {
-      center: [55.48, 50.8],
-      zoom: 8,
+      center: this.location,
+      zoom: 10,
       zoomControl: false,
     });
     const tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -30,15 +33,24 @@ export class PointsTabPage {
     L.control.zoom({
       position: 'bottomright',
     }).addTo(this.map);
+
+    this.map.locate({setView: true, maxZoom: 16})
+      .on('locationfound', el => {
+        this.location = [el.latitude, el.longitude];
+        console.log(this.location);
+      })
+      .on('locationerror', el => {
+        console.log('error', el);
+      });
   }
 
   ionViewWillLeave() {
     this.map.remove();
   }
 
-  changeView() {
-    this.view = this.view === 'map' ? 'list' : 'map';
-  }
+  backToLocation(){
+    this.map.setView(this.location, 16);
+}
 }
 
 

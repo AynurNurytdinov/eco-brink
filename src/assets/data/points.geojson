@@ -1,0 +1,125 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Пункт приема батареек",
+        "address": "Казань, ул. Пушкина, 5/43",
+        "description": "Не более 10 батареек за раз",
+        "contacts": {
+          "site": "https://eco2eco.ru/",
+          "phone": [
+            "8 (351) 240-03-01",
+            "8 (800) 100-03-26"
+          ]
+        },
+        "rules": [],
+        "schedule": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          49.12091910839081,
+          55.78672411694679
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Пункт приема батареек",
+        "address": "Казань, ул. Тихорецкая, 4",
+        "description": "МЕТРО",
+        "contacts": {
+          "site": "https://eco2eco.ru/",
+          "phone": [
+            "8 (351) 240-03-01",
+            "8 (800) 100-03-26"
+          ]
+        },
+        "rules": [],
+        "schedule": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          49.13119196891785,
+          55.73190696705938
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Пункт приема батареек",
+        "address": "Казань, ул. Мулланура Вахитова, 4",
+        "description": "МЕТРО",
+        "contacts": {
+          "site": "https://eco2eco.ru/",
+          "phone": [
+            "8 (351) 240-03-01",
+            "8 (800) 100-03-26"
+          ]
+        },
+        "rules": [],
+        "schedule": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          49.08202171325683,
+          55.81245954607279
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Пункт приема батареек",
+        "address": "Казань, пр. Победы, 141",
+        "description": "OBI",
+        "contacts": {
+          "site": "https://eco2eco.ru/",
+          "phone": [
+            "8 (351) 240-03-01",
+            "8 (800) 100-03-26"
+          ]
+        },
+        "rules": [],
+        "schedule": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          49.21602487564086,
+          55.781092318581976
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Пункт приема батареек",
+        "address": "Казань, ул. Рихарда Зорге, 11Б",
+        "description": "Лента",
+        "contacts": {
+          "site": "https://eco2eco.ru/",
+          "phone": [
+            "8 (351) 240-03-01",
+            "8 (800) 100-03-26"
+          ]
+        },
+        "rules": [],
+        "schedule": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          49.185254573822014,
+          55.76466284734951
+        ]
+      }
+    }
+  ]
+}
