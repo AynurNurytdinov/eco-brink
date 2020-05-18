@@ -20,54 +20,14 @@
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
 
-  
-
-  <div id="container" *ngIf="!loading">
-    <p>Всякие новости-хуевости, интересные посты, статьи</p>
-  </div><div id="container" *ngIf="!loading">
-    <p>Всякие новости-хуевости, интересные посты, статьи</p>
-  </div><div id="container" *ngIf="!loading">
-    <p>Всякие новости-хуевости, интересные посты, статьи</p>
-  </div><div id="container" *ngIf="!loading">
-    <p>Всякие новости-хуевости, интересные посты, статьи</p>
-  </div><div id="container" *ngIf="!loading">
-    <p>Всякие новости-хуевости, интересные посты, статьи</p>
-  </div><div id="container" *ngIf="!loading">
-    <p>Всякие новости-хуевости, интересные посты, статьи</p>
-  </div><div id="container" *ngIf="!loading">
-    <p>Всякие новости-хуевости, интересные посты, статьи</p>
-  </div><div id="container" *ngIf="!loading">
-    <p>Всякие новости-хуевости, интересные посты, статьи</p>
-  </div><div id="container" *ngIf="!loading">
-    <p>Всякие новости-хуевости, интересные посты, статьи</p>
-  </div><div id="container" *ngIf="!loading">
-    <p>Всякие новости-хуевости, интересные посты, статьи</p>
-  </div><div id="container" *ngIf="!loading">
-    <p>Всякие новости-хуевости, интересные посты, статьи</p>
-  </div><div id="container" *ngIf="!loading">
-    <p>Всякие новости-хуевости, интересные посты, статьи</p>
-  </div><div id="container" *ngIf="!loading">
-    <p>Всякие новости-хуевости, интересные посты, статьи</p>
-  </div><div id="container" *ngIf="!loading">
-    <p>Всякие новости-хуевости, интересные посты, статьи</p>
-  </div><div id="container" *ngIf="!loading">
-    <p>Всякие новости-хуевости, интересные посты, статьи</p>
-  </div><div id="container" *ngIf="!loading">
-    <p>Всякие новости-хуевости, интересные посты, статьи</p>
-  </div><div id="container" *ngIf="!loading">
-    <p>Всякие новости-хуевости, интересные посты, статьи</p>
-  </div><div id="container" *ngIf="!loading">
-    <p>Всякие новости-хуевости, интересные посты, статьи</p>
-  </div><div id="container" *ngIf="!loading">
-    <p>Всякие новости-хуевости, интересные посты, статьи</p>
-  </div><div id="container" *ngIf="!loading">
-    <p>Всякие новости-хуевости, интересные посты, статьи</p>
-  </div><div id="container" *ngIf="!loading">
-    <p>Всякие новости-хуевости, интересные посты, статьи</p>
-  </div><div id="container" *ngIf="!loading">
-    <p>Всякие новости-хуевости, интересные посты, статьи</p>
-  </div>
-
+  <ion-card *ngFor="let item of items">
+    <img src="{{item.img}}" />
+    <ion-card-header>
+      <ion-card-title>{{item.header}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content></ion-card-content>
+  </ion-card>
+ 
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button>
       <ion-icon name="add"></ion-icon>

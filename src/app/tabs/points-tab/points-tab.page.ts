@@ -33,7 +33,6 @@ export class PointsTabPage {
     L.control.zoom({
       position: 'bottomright',
     }).addTo(this.map);
-
     this.map.locate({setView: true, maxZoom: 16})
       .on('locationfound', el => {
         this.location = [el.latitude, el.longitude];

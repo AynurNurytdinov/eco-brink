@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NewsService } from 'src/app/services/news/news.service';
 
 @Component({
   selector: 'app-lenta-tab',
@@ -7,11 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LentaTabPage implements OnInit {
   loading = true;
-  constructor() {}
+  items;
+  constructor(private newsService: NewsService) {}
 
   ngOnInit() {
     setTimeout(() => {
       this.loading = false;
+      this.load();
     }, 2000);
   }
 
@@ -19,5 +22,11 @@ export class LentaTabPage implements OnInit {
     setTimeout(() => {
       event.target.complete();
     }, 2000);
+  }
+
+  load() {
+    this.newsService.load().subscribe(data => {
+      this.items = data;
+    });
   }
 }
