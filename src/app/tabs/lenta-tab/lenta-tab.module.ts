@@ -7,6 +7,7 @@ import { LentaTabPage } from './lenta-tab.page';
 import { ExploreContainerComponentModule } from '../../explore-container/explore-container.module';
 import { HttpClientModule } from '@angular/common/http';
 import { NewsService } from 'src/app/services/news/news.service';
+import { NewsPostPage } from './news-post/news-post.page';
 
 @NgModule({
   imports: [
@@ -14,10 +15,16 @@ import { NewsService } from 'src/app/services/news/news.service';
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    RouterModule.forChild([{ path: '', component: LentaTabPage }]),
-    HttpClientModule
+    RouterModule.forChild([
+      { path: '', component: LentaTabPage },
+      { path: 'news/:id', component: NewsPostPage }
+    ]),
+    HttpClientModule,
   ],
-  declarations: [LentaTabPage],
+  declarations: [
+    LentaTabPage,
+    NewsPostPage
+  ],
   providers: [
     NewsService
   ]

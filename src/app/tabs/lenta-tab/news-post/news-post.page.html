@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Новость</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="item">
+    <ion-card-header>
+      <ion-card-title>{{item[0].header}}</ion-card-title>
+      <ion-card-subtitle>{{item[0].date}}</ion-card-subtitle>
+    </ion-card-header>  
+    <img src="{{item[0].img}}" />
+    <ion-card-content style="display: flex;flex-direction: column;">
+      <span>{{item[0].text}}</span>
+      <div>
+        <ion-chip color="secondary" outline="true" *ngFor="let tag of item[0].tags">
+          <ion-label>{{tag}}</ion-label>
+        </ion-chip>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
