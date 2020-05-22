@@ -3,7 +3,7 @@ import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Tab4Page } from './tab4.page';
+import { ServicesPage } from './services.page';
 import { ExploreContainerComponentModule } from '../../explore-container/explore-container.module';
 
 @NgModule({
@@ -12,8 +12,8 @@ import { ExploreContainerComponentModule } from '../../explore-container/explore
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    RouterModule.forChild([{ path: '', component: Tab4Page }])
+    RouterModule.forChild([{ path: '', component: ServicesPage }])
   ],
-  declarations: [Tab4Page]
+  declarations: [ServicesPage]
 })
-export class Tab4PageModule {}
+export class ServicesPageModule {}

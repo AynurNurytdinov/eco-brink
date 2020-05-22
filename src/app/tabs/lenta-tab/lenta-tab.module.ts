@@ -8,6 +8,7 @@ import { ExploreContainerComponentModule } from '../../explore-container/explore
 import { HttpClientModule } from '@angular/common/http';
 import { NewsService } from 'src/app/services/news/news.service';
 import { NewsPostPage } from './news-post/news-post.page';
+import { SearchPage } from './search/search.page';
 
 @NgModule({
   imports: [
@@ -17,13 +18,15 @@ import { NewsPostPage } from './news-post/news-post.page';
     ExploreContainerComponentModule,
     RouterModule.forChild([
       { path: '', component: LentaTabPage },
-      { path: 'news/:id', component: NewsPostPage }
+      { path: 'news/:id', component: NewsPostPage },
+      { path: 'search', component: SearchPage },
     ]),
     HttpClientModule,
   ],
   declarations: [
     LentaTabPage,
-    NewsPostPage
+    NewsPostPage,
+    SearchPage
   ],
   providers: [
     NewsService

@@ -2,10 +2,10 @@
   <ion-toolbar>
     <ion-title>Лента</ion-title>
     <ion-buttons slot="end">
-      <ion-button>
+      <ion-button [routerLink]="['search']">
         <ion-icon name="search-outline"></ion-icon>
       </ion-button>
-      <ion-button>
+      <ion-button (click)="load()">
         <ion-icon name="refresh-outline"></ion-icon>
       </ion-button>
       <ion-button>
