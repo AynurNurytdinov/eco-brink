@@ -18,12 +18,77 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-item>
-    <ion-avatar slot="start">
+  <!-- <div style="display: flex;align-items: center; margin: 10px;">
+    <ion-avatar>
       <img src="../../../assets/data/img/7.jpg">
     </ion-avatar>
-    <ion-label>Кунафина Лилия</ion-label>
-  </ion-item>
-  Статистика, достижения, действующие скидки и купоны, настройки
-  <ion-button (click)="logout()" expand="block">Выйти</ion-button>
+    <ion-label style="padding-left: 20px;font-weight: bold;">Кунафина Лилия</ion-label>
+  </div> -->
+  <ion-card>
+    <ion-item-divider style="margin-bottom: 10px;">
+      <div style="display: flex;align-items: center; margin-top: 10px; margin-bottom: 10px;">
+        <ion-avatar>
+          <img src="../../../assets/data/img/7.jpg">
+        </ion-avatar>
+        <ion-label style="padding-left: 20px;font-weight: bold;color: black; font-size: 19px;">Кунафина Лилия</ion-label>
+      </div>
+    </ion-item-divider>
+
+    <ion-label style="margin-left:10px;font-weight: bold;color: black; font-size: 14px;">О себе</ion-label>
+    <ion-input value="Напишите коротко о себе и чем вы занимаетесь" disabled></ion-input>
+    <ion-item-divider></ion-item-divider>
+
+    <ion-buttons>
+      <ion-button [routerLink]="['']">
+        <ion-icon name="logo-instagram"></ion-icon>
+      </ion-button>
+      <ion-button [routerLink]="['']">
+        <ion-icon name="logo-whatsapp"></ion-icon>
+      </ion-button>
+      <ion-button [routerLink]="['']">
+        <ion-icon name="paper-plane-outline"></ion-icon>
+      </ion-button>
+      <ion-button [routerLink]="['']">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </ion-button>
+      <ion-button [routerLink]="['']">
+        <ion-icon name="logo-vk"></ion-icon>
+      </ion-button>
+      <ion-button [routerLink]="['']">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-card>
+
+  <ion-card>
+    <ion-item href="#">
+      <ion-icon name="gift-outline" slot="start"></ion-icon>
+      <ion-label>Магазин</ion-label>
+      <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="basket-outline" slot="start"></ion-icon>
+      <ion-label>Мои покупки</ion-label>
+      <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+    </ion-item>
+
+    <ion-item href="#">
+      <ion-icon name="stats-chart-outline" slot="start"></ion-icon>
+      <ion-label>Статистика</ion-label>
+      <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="medal-outline" slot="start"></ion-icon>
+      <ion-label>Достижения</ion-label>
+      <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+    </ion-item>
+  </ion-card>
+  <ion-card style="display: flex;flex-direction: column;align-items: center; padding-top: 10px;padding-bottom: 10px;">
+    <img src="../../../assets/data/img/8.jpg" style="width: 100px;"/>
+    <ion-label style="font-size: 16px;">Уровень 1</ion-label>
+    <ion-progress-bar color="success" value="0.25" style="padding: 5px;"></ion-progress-bar>
+    <ion-label style="font-size: 14px;">До следующего уровня осталось 75 баллов</ion-label>
+  </ion-card>
+  <!-- <ion-button (click)="logout()" expand="block">Выйти</ion-button> -->
 </ion-content>

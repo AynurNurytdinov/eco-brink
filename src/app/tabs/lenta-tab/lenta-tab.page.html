@@ -25,7 +25,19 @@
     <ion-card-header>
       <ion-card-title>{{item.header}}</ion-card-title>
     </ion-card-header>
-    <ion-card-content></ion-card-content>
+    <ion-toolbar>
+      <ion-buttons slot="end">
+        <ion-button (click)="console.log('clicked')">
+          <ion-icon name="bookmark-outline"></ion-icon>
+        </ion-button>
+        <ion-button (click)="console.log('clicked')">
+          <ion-icon name="share-social-outline"></ion-icon>
+        </ion-button>
+        <ion-button (click)="console.log('clicked')">
+          <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
   </ion-card>
  
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
