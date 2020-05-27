@@ -20,7 +20,7 @@
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
 
-  <ion-card *ngFor="let item of items" routerLink="news/{{item.id}}">
+  <ion-card *ngFor="let item of items" routerLink="news/{{item.id}}" mode="md">
     <img src="{{item.img}}" />
     <ion-card-header>
       <ion-card-title>{{item.header}}</ion-card-title>
