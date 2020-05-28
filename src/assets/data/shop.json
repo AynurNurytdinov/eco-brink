@@ -1,0 +1,79 @@
+[
+  {
+    "id": 1,
+    "name": "Сумка",
+    "img": "../../../assets/img/4.png",
+    "price": 50,
+    "type": "Россия"
+  },
+  {
+    "id": 2,
+    "name": "Сумка",
+    "img": "../../../assets/img/4.png",
+    "price": 50,
+    "type": "Россия"
+  },
+  {
+    "id": 3,
+    "name": "Сумка",
+    "img": "../../../assets/img/4.png",
+    "price": 50,
+    "type": "Россия"
+  },
+  {
+    "id": 4,
+    "name": "Сумка",
+    "img": "../../../assets/img/4.png",
+    "price": 50,
+    "type": "Россия"
+  },
+  {
+    "id": 5,
+    "name": "Сумка",
+    "img": "../../../assets/img/4.png",
+    "price": 50,
+    "type": "Россия"
+  },
+  {
+    "id": 6,
+    "name": "Сумка",
+    "img": "../../../assets/img/4.png",
+    "price": 50,
+    "type": "Россия"
+  },
+  {
+    "id": 7,
+    "name": "Сумка",
+    "img": "../../../assets/img/4.png",
+    "price": 50,
+    "type": "Россия"
+  },
+  {
+    "id": 8,
+    "name": "Сумка",
+    "img": "../../../assets/img/4.png",
+    "price": 50,
+    "type": "Россия"
+  },
+  {
+    "id": 9,
+    "name": "Сумка",
+    "img": "../../../assets/img/4.png",
+    "price": 50,
+    "type": "Россия"
+  },
+  {
+    "id": 10,
+    "name": "Сумка",
+    "img": "../../../assets/img/4.png",
+    "price": 50,
+    "type": "Россия"
+  },
+  {
+    "id": 11,
+    "name": "Сумка",
+    "img": "../../../assets/img/4.png",
+    "price": 50,
+    "type": "Россия"
+  }
+]

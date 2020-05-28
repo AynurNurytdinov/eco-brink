@@ -11,6 +11,8 @@ import { StatsPage } from './stats/stats.page';
 import { AchievementsPage } from './achievements/achievements.page';
 import { PurchasesPage } from './purchases/purchases.page';
 import { ShopPage } from './shop/shop.page';
+import { ShopService } from 'src/app/services/shop/shop.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
@@ -26,7 +28,8 @@ import { ShopPage } from './shop/shop.page';
       { path: 'achievements', component: AchievementsPage },
       { path: 'purchases', component: PurchasesPage },
       { path: 'shop', component: ShopPage },
-    ])
+    ]),
+    HttpClientModule
   ],
   declarations: [
     ProfileTabPage,
@@ -36,6 +39,9 @@ import { ShopPage } from './shop/shop.page';
     AchievementsPage,
     PurchasesPage,
     ShopPage
+  ],
+  providers: [
+    ShopService
   ]
 })
 export class ProfileTabPageModule {}
