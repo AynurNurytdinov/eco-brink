@@ -55,24 +55,24 @@
   </ion-card>
 
   <ion-card mode="md">
-    <ion-item>
+    <ion-item [routerLink]="['shop']">
       <ion-icon name="gift-outline" slot="start"></ion-icon>
       <ion-label>Магазин</ion-label>
       <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
     </ion-item>
-    <ion-item>
+    <ion-item [routerLink]="['purchases']">
       <ion-icon name="basket-outline" slot="start"></ion-icon>
       <ion-label>Мои покупки</ion-label>
       <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
     </ion-item>
 
-    <ion-item>
+    <ion-item [routerLink]="['stats']">
       <ion-icon name="stats-chart-outline" slot="start"></ion-icon>
       <ion-label>Статистика</ion-label>
       <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
     </ion-item>
 
-    <ion-item>
+    <ion-item [routerLink]="['achievements']">
       <ion-icon name="medal-outline" slot="start"></ion-icon>
       <ion-label>Достижения</ion-label>
       <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
