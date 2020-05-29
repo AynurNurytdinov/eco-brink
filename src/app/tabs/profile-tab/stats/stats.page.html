@@ -5,7 +5,7 @@
     </ion-buttons>
     <ion-title>Статистика</ion-title>
       <ion-buttons slot="end">
-      <ion-button>
+      <ion-button (click)="presentModal()">
         <ion-icon name="funnel-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -13,64 +13,66 @@
 </ion-header>
 
 <ion-content>
-  <ion-segment scrollable value="total" mode="md" style="overflow: hidden;">
-    <ion-segment-button value="total" style="min-width: 90px;">
-      <ion-label>Всего</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="processing" style="min-width: 120px;">
-      <ion-label>Переработка</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="utilization" style="min-width: 112px;">
-      <ion-label>Утилизация</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="good" style="min-width: 80px;">
-      <ion-label>Благо</ion-label>
-    </ion-segment-button>
-  </ion-segment>
-
-  <ion-item>
-    <ion-icon name="calendar-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
-    <ion-label>За месяц</ion-label>
-    <ion-note slot="end" style="font-size: 17px; color: #a6a6a6;">12 кг</ion-note>
-  </ion-item>
-  <ion-item>
-    <ion-icon name="speedometer-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
-    <ion-label>Уровень</ion-label>
-    <ion-note slot="end" style="font-size: 17px; color:#a6a6a6;">1</ion-note>
-  </ion-item>
-  <ion-item>
-    <ion-icon name="add-circle-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
-    <ion-label>Баллы</ion-label>
-    <ion-note slot="end" style="font-size: 17px; color:#a6a6a6;">25</ion-note>
-  </ion-item>
-  <ion-item>
-    <ion-icon name="star-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
-    <ion-label>Поступки</ion-label>
-    <ion-note slot="end" style="font-size: 17px; color:#a6a6a6;">2</ion-note>
-  </ion-item>
-  <ion-item>
-    <ion-icon name="color-wand-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
-    <ion-label>Испытания</ion-label>
-    <ion-note slot="end" style="font-size: 17px; color:#a6a6a6;">1</ion-note>
-  </ion-item>
-  <ion-item>
-    <ion-icon name="rocket-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
-    <ion-label>Мероприятия</ion-label>
-    <ion-note slot="end" style="font-size: 17px; color:#a6a6a6;">3</ion-note>
-  </ion-item>
-  <ion-item>
-    <ion-icon name="ribbon-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
-    <ion-label>Значки</ion-label>
-    <ion-note slot="end" style="font-size: 17px; color:#a6a6a6;">1</ion-note>
-  </ion-item>
-  <ion-item>
-    <ion-icon name="medal-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
-    <ion-label>Медали</ion-label>
-    <ion-note slot="end" style="font-size: 17px; color:#a6a6a6;">0</ion-note>
-  </ion-item>
-  <ion-item>
-    <ion-icon name="cart-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
-    <ion-label>Потрачено бонусов</ion-label>
-    <ion-note slot="end" style="font-size: 17px; color:#a6a6a6;">0</ion-note>
-  </ion-item>
+  <ion-card>
+    <ion-segment scrollable value="total" mode="md">
+      <ion-segment-button value="total" style="min-width: 90px;">
+        <ion-label>Всего</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="processing" style="min-width: 120px;">
+        <ion-label>Переработка</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="utilization" style="min-width: 112px;">
+        <ion-label>Утилизация</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="good" style="min-width: 80px;">
+        <ion-label>Благо</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  
+    <ion-item>
+      <ion-icon name="calendar-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+      <ion-label>За месяц</ion-label>
+      <ion-note slot="end" style="font-size: 17px; color: #a6a6a6;">12 кг</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="speedometer-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+      <ion-label>Уровень</ion-label>
+      <ion-note slot="end" style="font-size: 17px; color:#a6a6a6;">1</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="add-circle-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+      <ion-label>Баллы</ion-label>
+      <ion-note slot="end" style="font-size: 17px; color:#a6a6a6;">25</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="star-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+      <ion-label>Поступки</ion-label>
+      <ion-note slot="end" style="font-size: 17px; color:#a6a6a6;">2</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="color-wand-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+      <ion-label>Испытания</ion-label>
+      <ion-note slot="end" style="font-size: 17px; color:#a6a6a6;">1</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="rocket-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+      <ion-label>Мероприятия</ion-label>
+      <ion-note slot="end" style="font-size: 17px; color:#a6a6a6;">3</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="ribbon-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+      <ion-label>Значки</ion-label>
+      <ion-note slot="end" style="font-size: 17px; color:#a6a6a6;">1</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="medal-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+      <ion-label>Медали</ion-label>
+      <ion-note slot="end" style="font-size: 17px; color:#a6a6a6;">0</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="cart-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+      <ion-label>Потрачено бонусов</ion-label>
+      <ion-note slot="end" style="font-size: 17px; color:#a6a6a6;">0</ion-note>
+    </ion-item>
+  </ion-card>
 </ion-content>

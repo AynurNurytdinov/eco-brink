@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Фильтр</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">
+        <ion-icon name="close-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-list>
+      <ion-radio-group value="week">
+        <ion-list-header>
+          <ion-label>Период</ion-label>
+        </ion-list-header>
+    
+        <ion-item>
+          <ion-label>За неделю</ion-label>
+          <ion-radio slot="start" value="week"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>За месяц</ion-label>
+          <ion-radio slot="start" value="month"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>За три месяца</ion-label>
+          <ion-radio slot="start" value="quarter"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>За полгода</ion-label>
+          <ion-radio slot="start" value="half-year"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>За год</ion-label>
+          <ion-radio slot="start" value="year"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+    <ion-button expand="block" style="margin: 15px;">Применить</ion-button>
+  </ion-card>
+</ion-content>

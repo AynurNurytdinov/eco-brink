@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { FilterModalPage } from './filter-modal/filter-modal.page';
 
 @Component({
   selector: 'app-stats',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StatsPage implements OnInit {
 
-  constructor() { }
+  constructor(public modalController: ModalController) { }
 
   ngOnInit() {
   }
 
+  async presentModal() {
+    const modal = await this.modalController.create({
+      component: FilterModalPage
+    });
+    return await modal.present();
+  }
 }

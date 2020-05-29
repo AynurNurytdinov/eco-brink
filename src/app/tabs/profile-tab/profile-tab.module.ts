@@ -13,6 +13,7 @@ import { PurchasesPage } from './purchases/purchases.page';
 import { ShopPage } from './shop/shop.page';
 import { ShopService } from 'src/app/services/shop/shop.service';
 import { HttpClientModule } from '@angular/common/http';
+import { FilterModalPage } from './stats/filter-modal/filter-modal.page';
 
 @NgModule({
   imports: [
@@ -38,10 +39,14 @@ import { HttpClientModule } from '@angular/common/http';
     StatsPage,
     AchievementsPage,
     PurchasesPage,
-    ShopPage
+    ShopPage,
+    FilterModalPage
   ],
   providers: [
     ShopService
+  ],
+  entryComponents: [
+    FilterModalPage
   ]
 })
 export class ProfileTabPageModule {}
