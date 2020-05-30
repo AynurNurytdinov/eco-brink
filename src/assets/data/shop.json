@@ -1,79 +1,30 @@
 [
   {
     "id": 1,
-    "name": "Сумка",
-    "img": "../../../assets/img/4.png",
-    "price": 50,
-    "type": "Россия"
+    "name": "Тканевая сумка",
+    "img": "../../../assets/img/13.jpg",
+    "price": 35,
+    "type": "eco"
   },
   {
     "id": 2,
-    "name": "Сумка",
-    "img": "../../../assets/img/4.png",
-    "price": 50,
-    "type": "Россия"
+    "name": "Складная сумка",
+    "img": "../../../assets/img/12.jpg",
+    "price": 40,
+    "type": "eco"
   },
   {
     "id": 3,
-    "name": "Сумка",
-    "img": "../../../assets/img/4.png",
-    "price": 50,
-    "type": "Россия"
+    "name": "Ланч-бокс",
+    "img": "../../../assets/img/11.jpg",
+    "price": 55,
+    "type": "eco"
   },
   {
     "id": 4,
-    "name": "Сумка",
-    "img": "../../../assets/img/4.png",
+    "name": "Набор: 3 столовых прибора в футляре",
+    "img": "../../../assets/img/10.jpg",
     "price": 50,
-    "type": "Россия"
-  },
-  {
-    "id": 5,
-    "name": "Сумка",
-    "img": "../../../assets/img/4.png",
-    "price": 50,
-    "type": "Россия"
-  },
-  {
-    "id": 6,
-    "name": "Сумка",
-    "img": "../../../assets/img/4.png",
-    "price": 50,
-    "type": "Россия"
-  },
-  {
-    "id": 7,
-    "name": "Сумка",
-    "img": "../../../assets/img/4.png",
-    "price": 50,
-    "type": "Россия"
-  },
-  {
-    "id": 8,
-    "name": "Сумка",
-    "img": "../../../assets/img/4.png",
-    "price": 50,
-    "type": "Россия"
-  },
-  {
-    "id": 9,
-    "name": "Сумка",
-    "img": "../../../assets/img/4.png",
-    "price": 50,
-    "type": "Россия"
-  },
-  {
-    "id": 10,
-    "name": "Сумка",
-    "img": "../../../assets/img/4.png",
-    "price": 50,
-    "type": "Россия"
-  },
-  {
-    "id": 11,
-    "name": "Сумка",
-    "img": "../../../assets/img/4.png",
-    "price": 50,
-    "type": "Россия"
+    "type": "eco"
   }
 ]
