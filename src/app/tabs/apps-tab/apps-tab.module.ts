@@ -9,6 +9,9 @@ import { InfoPage } from './info/info.page';
 import { DoingPage } from './doing/doing.page';
 import { TestsPage } from './tests/tests.page';
 import { EventsPage } from './events/events.page';
+import { MarkersModalPage } from './info/markers/markers.page';
+import { HttpClientModule } from '@angular/common/http';
+import { PaperModalPage } from './info/paper/paper.page';
 
 @NgModule({
   imports: [
@@ -16,6 +19,7 @@ import { EventsPage } from './events/events.page';
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
+    HttpClientModule,
     RouterModule.forChild([
       { path: '', component: AppsTabPage },
       { path: 'info', component: InfoPage },
@@ -29,7 +33,13 @@ import { EventsPage } from './events/events.page';
     InfoPage,
     DoingPage,
     TestsPage,
-    EventsPage
+    EventsPage,
+    MarkersModalPage,
+    PaperModalPage
+  ],
+  entryComponents: [
+    MarkersModalPage,
+    PaperModalPage
   ]
 })
 export class AppsTabPageModule {}

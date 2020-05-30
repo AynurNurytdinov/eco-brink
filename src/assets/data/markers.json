@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "PET",
+    "description": "Полиэтилентерефталат, РЕТЕ, ПЭТ",
+    "img": "../../../assets/img/markers/1.png"
+  },
+  {
+    "id": 2,
+    "name": "HDPE",
+    "description": "Полиэтилен выс.плотн.,PEHD,ПЭВД,ПНД",
+    "img": "../../../assets/img/markers/2.png"
+  },
+  {
+    "id": 3,
+    "name": "PVC",
+    "description": "Поливинилхлорид, ПВХ",
+    "img": "../../../assets/img/markers/3.png"
+  },
+  {
+    "id": 4,
+    "name": "LDPE",
+    "description": "Полиэтилен низ.плотн.,PLDE,ПЭНП,ПВД,PELD",
+    "img": "../../../assets/img/markers/4.png"
+  },
+  {
+    "id": 5,
+    "name": "PP",
+    "description": "Полипропилен, ПП",
+    "img": "../../../assets/img/markers/5.png"
+  },
+  {
+    "id": 6,
+    "name": "PS",
+    "description": "Полистирол, ПС",
+    "img": "../../../assets/img/markers/6.png"
+  },
+  {
+    "id": 7,
+    "name": "OTHER",
+    "description": "Другие виды пластика или смесь",
+    "img": "../../../assets/img/markers/7.png"
+  },
+  {
+    "id": 8,
+    "name": "ABS",
+    "description": "АБС-пластик",
+    "img": "../../../assets/img/markers/9.png"
+  },
+  {
+    "id": 9,
+    "name": "PAP",
+    "description": "Гофрированный картон",
+    "img": "../../../assets/img/markers/10.png"
+  },
+  {
+    "id": 10,
+    "name": "PAP",
+    "description": "Прочий картон",
+    "img": "../../../assets/img/markers/11.png"
+  },
+  {
+    "id": 11,
+    "name": "PAP",
+    "description": "Бумага",
+    "img": "../../../assets/img/markers/12.png"
+  },
+  {
+    "id": 12,
+    "name": "PBD",
+    "description": "Вощёная бумага",
+    "img": "../../../assets/img/markers/13.png"
+  }
+]
