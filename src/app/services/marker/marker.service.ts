@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import * as mapboxgl from 'mapbox-gl';
 import { environment } from '../../../environments/environment';
-import * as MapboxLanguage from '@mapbox/mapbox-gl-language' ;
 
 @Injectable({
   providedIn: 'root'
@@ -72,18 +71,37 @@ export class MarkerService {
 
   makePointsMarkers(): void {
     this.http.get(this.points).subscribe((res: any) => {
-      for (const c of res.features) {
-        const lon = c.geometry.coordinates[0];
-        const lat = c.geometry.coordinates[1];
-        const marker = new mapboxgl.Marker().setLngLat([lon, lat]).addTo(this.map);
-        marker.getElement().addEventListener('click', (el) => {
-          console.log(el);
-        });
-      }
+      console.log(res);
+      
+      this.map.addLayer(res);
+      // for (const c of res.features) {
+      //   const lon = c.geometry.coordinates[0];
+      //   const lat = c.geometry.coordinates[1];
+      //   const popupHTML = `<span>${c.properties.name}</span>` +
+      //   `<button (click)="log(c)">привет</button>`;
+      //   const popup = new mapboxgl.Popup().setHTML(popupHTML);
+      //   const marker = new mapboxgl.Marker().setLngLat([lon, lat]).setPopup(popup).addTo(this.map);
+      // }
     });
   }
 
   removeMap() {
     this.map.remove();
+  }
+
+
+
+  ClickedGameObject(feature) {
+    let html = '';
+    html += '<div>';
+    html += '<h2>' + feature.properties.title + '</h2>';
+    html += '<p>' + feature.properties.description + '</p>';
+    html += '<button class=\'content\' id=\'btn-collectobj\' value=\'Collect\'>Collect</button>';
+    html += '</div>';
+    return html;
+  }
+
+  AddGameObjectToInventory(coords) {
+    console.log('adding coords to inventory', coords);
   }
 }
