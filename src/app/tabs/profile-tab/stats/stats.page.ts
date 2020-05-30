@@ -8,6 +8,7 @@ import { FilterModalPage } from './filter-modal/filter-modal.page';
   styleUrls: ['./stats.page.scss'],
 })
 export class StatsPage implements OnInit {
+  type = 'total';
 
   constructor(public modalController: ModalController) { }
 
@@ -19,5 +20,9 @@ export class StatsPage implements OnInit {
       component: FilterModalPage
     });
     return await modal.present();
+  }
+
+  segmentChanged(ev: any) {
+    this.type = ev.detail.value;
   }
 }
