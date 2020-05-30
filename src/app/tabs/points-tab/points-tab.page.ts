@@ -6,6 +6,8 @@ import Directions from '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions';
 // import * as MapboxDirections from '@mapbox/mapbox-gl-directions';
 // var MapboxDirections = require('@mapbox/mapbox-gl-directions');
 import { environment } from '../../../environments/environment';
+import { ModalController } from '@ionic/angular';
+import { FilterModalPage } from './filter-modal/filter-modal.page';
 
 @Component({
   selector: 'app-points-tab',
@@ -22,7 +24,10 @@ export class PointsTabPage {
   lng = 49.1;
   zoom = 10;
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient,
+    public modalController: ModalController
+  ) { }
 
   ionViewDidEnter() {
     this.buildMap();
@@ -47,7 +52,7 @@ export class PointsTabPage {
           document.getElementById('btn-collectobj')
             .addEventListener('click', () => {
                 console.log('clicked a button');
-                this.AddGameObjectToInventory(feature.geometry.coordinates);
+                this.createRoute(feature.geometry.coordinates);
             });
         }
       });
@@ -146,11 +151,18 @@ export class PointsTabPage {
     return html;
   }
 
-  AddGameObjectToInventory(coords) {
+  createRoute(coords) {
     this.directions.setOrigin(this.myLocation);
     this.directions.options.controls.instructions = true;
     this.directions.setDestination(coords);
     const element = document.getElementsByClassName('mapboxgl-popup');
     element[0].setAttribute('style', 'display: none;');
+  }
+
+  async presentModal() {
+    const modal = await this.modalController.create({
+      component: FilterModalPage
+    });
+    return await modal.present();
   }
 }

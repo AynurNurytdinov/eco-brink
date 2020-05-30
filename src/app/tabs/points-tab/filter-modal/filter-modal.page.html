@@ -1,0 +1,263 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Фильтр</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">
+        <ion-icon name="close-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-segment scrollable mode="md" value="all" (ionChange)="segmentChanged($event)">
+      <ion-segment-button value="all" style="min-width: 50px;">
+        <ion-label>Все</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="processing" style="min-width: 120px;">
+        <ion-label>Переработка</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="utilization" style="min-width: 112px;">
+        <ion-label>Утилизация</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="good" style="min-width: 80px;">
+        <ion-label>Благо</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+    <ion-list *ngIf="type === 'good'">
+      <ion-item>
+        <ion-icon name="shirt-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+        <ion-label>Одежда</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="restaurant-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+        <ion-label>Продукты</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="game-controller-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+        <ion-label>Игрушки</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="library-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+        <ion-label>Книги</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="bed-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+        <ion-label>Мебель</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="ellipsis-horizontal-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+        <ion-label>Другое</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+    <ion-list *ngIf="type === 'utilization'">
+      <ion-item>
+        <ion-icon name="newspaper-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+        <ion-label>Макулатура</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="flash-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+        <ion-label>Электроника</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="battery-full-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+        <ion-label>Батарейки></ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="bulb-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+        <ion-label>Лампочки</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="car-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+        <ion-label>Авто</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="fast-food-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+        <ion-label>Пищевые отходы</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="medical-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+        <ion-label>Медицинское</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="thermometer-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+        <ion-label>Ртутьсодержащие отходы</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="skull-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+        <ion-label>Опасные отходы</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+    <ion-list *ngIf="type === 'processing'">
+      <ion-item>
+        <ion-icon name="newspaper-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+        <ion-label>Макулатура</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="cube-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+        <ion-label>Картон</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="flask-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+        <ion-label>Стекло</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="grid-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+        <ion-label>Пластик</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="shirt-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+        <ion-label>Текстиль</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="flash-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+        <ion-label>Электроника</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="construct-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+        <ion-label>Железо</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="radio-button-on-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+        <ion-label>Шины</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="ellipsis-horizontal-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+        <ion-label>Другое</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+    <ion-list *ngIf="type === 'all'">
+      <ion-item>
+        <ion-icon name="newspaper-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+        <ion-label>Макулатура</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="cube-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+        <ion-label>Картон</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="flask-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+        <ion-label>Стекло</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="grid-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+        <ion-label>Пластик</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="shirt-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+        <ion-label>Текстиль</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="flash-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+        <ion-label>Электроника</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="construct-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+        <ion-label>Железо</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="radio-button-on-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+        <ion-label>Шины</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="battery-full-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+        <ion-label>Батарейки></ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="bulb-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+        <ion-label>Лампочки</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="car-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+        <ion-label>Авто</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="fast-food-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+        <ion-label>Пищевые отходы</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="medical-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+        <ion-label>Медицинское</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="thermometer-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+        <ion-label>Ртутьсодержащие отходы</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="shirt-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+        <ion-label>Одежда</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="restaurant-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+        <ion-label>Продукты</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="game-controller-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+        <ion-label>Игрушки</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="library-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+        <ion-label>Книги</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="bed-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+        <ion-label>Мебель</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="skull-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+        <ion-label>Опасные отходы</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="ellipsis-horizontal-outline" slot="start" style="color:#a6a6a6;"></ion-icon>
+        <ion-label>Другое</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+    <ion-button expand="block" style="margin: 15px;">Применить</ion-button>
+  </ion-card>
+</ion-content>

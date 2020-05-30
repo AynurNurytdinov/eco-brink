@@ -8,6 +8,7 @@ import { ExploreContainerComponentModule } from '../../explore-container/explore
 import { PointsListPage } from './points-list/points-list.page';
 import { MarkerService } from 'src/app/services/marker/marker.service';
 import { HttpClientModule } from '@angular/common/http';
+import { FilterModalPage } from './filter-modal/filter-modal.page';
 
 @NgModule({
   imports: [
@@ -23,10 +24,14 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   declarations: [
     PointsTabPage,
-    PointsListPage
+    PointsListPage,
+    FilterModalPage
   ],
   providers: [
     MarkerService
+  ],
+  entryComponents:[
+    FilterModalPage
   ]
 })
 export class PointsTabPageModule {}
