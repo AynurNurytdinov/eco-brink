@@ -14,7 +14,7 @@
           "type": "Feature",
           "properties": {
             "name": "Пункт приема батареек",
-            "address": "Казань, ул. Пушкина, 5/43",
+            "address": "г. Казань, ул. Пушкина, 5/43",
             "description": "Не более 10 батареек за раз",
             "contacts": {
               "site": "https://eco2eco.ru/",
@@ -38,7 +38,7 @@
           "type": "Feature",
           "properties": {
             "name": "Пункт приема батареек",
-            "address": "Казань, ул. Тихорецкая, 4",
+            "address": "г. Казань, ул. Тихорецкая, 4",
             "description": "МЕТРО",
             "contacts": {
               "site": "https://eco2eco.ru/",
@@ -62,7 +62,7 @@
           "type": "Feature",
           "properties": {
             "name": "Пункт приема батареек",
-            "address": "Казань, ул. Мулланура Вахитова, 4",
+            "address": "г. Казань, ул. Мулланура Вахитова, 4",
             "description": "МЕТРО",
             "contacts": {
               "site": "https://eco2eco.ru/",
@@ -86,7 +86,7 @@
           "type": "Feature",
           "properties": {
             "name": "Пункт приема батареек",
-            "address": "Казань, пр. Победы, 141",
+            "address": "г. Казань, пр. Победы, 141",
             "description": "OBI",
             "contacts": {
               "site": "https://eco2eco.ru/",
@@ -110,7 +110,7 @@
           "type": "Feature",
           "properties": {
             "name": "Пункт приема батареек",
-            "address": "Казань, ул. Рихарда Зорге, 11Б",
+            "address": "г. Казань, ул. Рихарда Зорге, 11Б",
             "description": "Лента",
             "contacts": {
               "site": "https://eco2eco.ru/",
