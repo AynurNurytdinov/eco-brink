@@ -37,7 +37,7 @@ export class PointsTabPage {
     this.removeMap();
   }
 
-  initMap() {
+  setEventMap() {
     this.map.on('load', () => {
       this.addControls();
       this.makePointsMarkers();
@@ -71,7 +71,7 @@ export class PointsTabPage {
             zoom: this.zoom,
             center: [position.coords.longitude, position.coords.latitude]
           });
-          this.initMap();
+          this.setEventMap();
         },
         error => {
           this.map = new mapboxgl.Map({
@@ -81,7 +81,7 @@ export class PointsTabPage {
             zoom: this.zoom,
             center: [this.lng, this.lat]
           });
-          this.initMap();
+          this.setEventMap();
         }
       );
     }
@@ -153,7 +153,6 @@ export class PointsTabPage {
 
   createRoute(coords) {
     this.directions.setOrigin(this.myLocation);
-    this.directions.options.controls.instructions = true;
     this.directions.setDestination(coords);
     const element = document.getElementsByClassName('mapboxgl-popup');
     element[0].setAttribute('style', 'display: none;');
